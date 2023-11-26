@@ -1,0 +1,62 @@
+﻿<Window x:Class="CleaningApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CleaningApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <!-- Первая вкладка "Вход" -->
+            <TabItem Header="Вход">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Логин -->
+                    <Label Content="Логин:" VerticalAlignment="Center" FontSize="16" Margin="5"/>
+                    <TextBox Name="LoginTextBox" Width="400" Height="30" Margin="5" Grid.Row="0"/>
+
+                    <!-- Пароль -->
+                    <Label Content="Пароль:" VerticalAlignment="Center" FontSize="16" Margin="5" Grid.Row="1"/>
+                    <PasswordBox Name="PasswordBox" Width="400" Height="30" Margin="5" Grid.Row="1"/>
+
+                    <!-- Кнопка -->
+                    <Button Content="Войти" Width="100" Height="30" HorizontalAlignment="Center" Margin="5" Grid.Row="3" Click="Button_Click_1"/>
+                </Grid>
+            </TabItem>
+
+            <!-- Вторая вкладка "Квитанция" -->
+            <TabItem Header="Квитанция">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Номер клиента -->
+                    <Label Content="Номер клиента:" VerticalAlignment="Center" FontSize="16" Margin="5"/>
+                    <TextBox Name="ClientNumberTextBox" Width="400" Height="30" Margin="5" Grid.Row="0"/>
+
+                    <!-- Услуги -->
+                    <Label Content="Услуги:" VerticalAlignment="Center" FontSize="16" Margin="5" Grid.Row="1"/>
+                    <TextBox Name="ServicesTextBox" Width="400" Height="30" Margin="5" Grid.Row="1"/>
+
+                    <!-- Общая стоимость -->
+                    <Label Content="Общая стоимость:" VerticalAlignment="Center" FontSize="16" Margin="5" Grid.Row="2"/>
+                    <TextBox Name="TotalCostTextBox" Width="400" Height="30" Margin="5" Grid.Row="2"/>
+
+                    <!-- Кнопка -->
+                    <Button Content="Сохранить" Width="100" Height="30" HorizontalAlignment="Center" Margin="5" Grid.Row="3" Click="Button_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
